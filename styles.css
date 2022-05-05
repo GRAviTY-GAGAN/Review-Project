@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 0.875rem;
+    background-color: hsl(210, 36%, 96%);
+}
+
+h2{
+    letter-spacing: 0.2rem;
+}
+.underline{
+    background-color: hsl(205, 78%, 60%);
+    height: 0.25rem;
+    width: 5rem;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15rem;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    background-color: #fff;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 50px 15px 50px;
+}
+
+#person-img{
+    /* padding: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-top: 1px; */
+    max-width: 200px;
+    border-radius: 50%;
+    transition: all 0.3s linear;;
+}
+
+#author{
+    letter-spacing: 0.2rem;
+}
+
+#job{
+    color: hsl(205, 78%, 60%);
+}
