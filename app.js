@@ -53,9 +53,43 @@ let currentItem = 1;
 
 // load initial item
 window.addEventListener('DOMContentLoaded', function(){
-   const item = reviews[currentItem];
+   showPerson(currentItem);
+})
+
+// show person based on item
+function showPerson(person) {
+  const item = reviews[person];
    img.src = item.img;
    author.textContent = item.name;
    info.textContent = item.text;
    job.textContent = item.job;
+}
+
+// show next person
+nextBtn.addEventListener('click', function() {
+  currentItem++;
+  // since reviews.length = 4 and and array index starts from 0 and end at 3 we are using if(currentItem > reviews.length - 1 ) if current item is greater than 3 then currentItem will be changed to 0.
+  if(currentItem > reviews.length - 1 ) {
+    currentItem = 0;
+  }
+  console.log(currentItem);
+  showPerson(currentItem);
+  
+})
+
+prevBtn.addEventListener('click', function() {
+  currentItem--;
+  // since reviews.length = 4 and and array index starts from 0 and end at 3 we are using if(currentItem > reviews.length - 1 ) if current item is greater than 3 then currentItem will be changed to 0.
+  if(currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  console.log(currentItem);
+  showPerson(currentItem);
+  
+})
+
+randomBtn.addEventListener('click', function () {
+  currentItem = Math.floor(Math.random()*reviews.length);
+  console.log(currentItem);
+  showPerson(currentItem);
 })
